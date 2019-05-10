@@ -2,6 +2,7 @@ package com.pspl.bankapp.model;
 
 import com.pspl.bankapp.specification.BankSpecification;
 
+//BankAccount 
 public abstract class BankAccount implements BankSpecification {
 	
 	private int accId;
@@ -15,6 +16,7 @@ public abstract class BankAccount implements BankSpecification {
 	public BankAccount() {
 		this.accId = ++accIdGenerator;
 	}
+
 
 	public BankAccount(String accHolderName, String accType, double balance) {
 		this();
@@ -55,10 +57,11 @@ public abstract class BankAccount implements BankSpecification {
 		System.out.println("Bank Name : " + bankName);
 	}
 	
+	
 	@Override
 	public String toString() {
 		return "BankAccount [accId=" + accId + ", accHolderName=" + accHolderName + ", accType=" + accType
-				+ ", balance=" + balance + "]";
+				+ ", balance=" + balance + "]";	//toString method
 	}
 	
 	static {
